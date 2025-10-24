@@ -13,6 +13,10 @@ const router = createRouter({
       path: '/',
       component: () => import('./views/HomeView.vue'),
     },
+    {
+      path: '/plouf-plouf',
+      component: () => import('./views/PloufPloufView.vue'),
+    },
   ],
   history: createWebHistory(),
 })
