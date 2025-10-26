@@ -9,6 +9,7 @@ const {
   items: _items,
   displayItems,
   isReady,
+  isResettable,
   currentIndex,
   run,
   runWithoutLast,
@@ -21,10 +22,11 @@ _items.value = props.items
 <template>
   <UContainer class="flex flex-col gap-5 mt-5">
     <UContainer class="w-full flex gap-5 justify-center">
-      <UButton class="cursor-pointer" :disabled="!isReady" @click="run()">Run</UButton>
-      <UButton class="cursor-pointer" :disabled="!isReady || currentIndex == undefined" @click="runWithoutLast()">Run
+      <UButton class="cursor-pointer" :disabled="!isReady" @click="run()" block>Run</UButton>
+      <UButton class="cursor-pointer" :disabled="!isReady || currentIndex == undefined" @click="runWithoutLast()" block>
+        Run
         without</UButton>
-      <UButton class="cursor-pointer" :disabled="currentIndex == undefined" @click="reset()">Reset
+      <UButton class="cursor-pointer" :disabled="!isResettable" @click="reset()" block>Reset
       </UButton>
     </UContainer>
     <PloufPloufDisplay :items="displayItems" />

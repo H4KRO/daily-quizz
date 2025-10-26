@@ -2,8 +2,8 @@
 
 const items = [
   {
-    label: 'Theme',
-    slot: 'theme',
+    label: 'Themes',
+    slot: 'themes',
   },
   {
     label: 'Points',
@@ -18,8 +18,8 @@ const pointItems = [...Array(Math.max(0, 10))].map((_, i) => String(i + 1))
 
 <template>
   <UContainer class="mt-5">
-    <UTabs :items="items">
-      <template #theme>
+    <UTabs :items="items" :ui="{ trigger: 'cursor-pointer' }">
+      <template #themes>
         <PloufPloufDisplayContainer :items="themeItems" />
       </template>
 

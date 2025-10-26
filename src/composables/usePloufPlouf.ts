@@ -28,6 +28,7 @@ export default function usePloufPlouf() {
       !isRunning.value &&
       displayItems.value.filter((item) => !item.isDisabled).length > 1,
   )
+  const isResettable = computed(() => disabledIndices.value.length > 0 && !isRunning.value)
 
   const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 
@@ -43,7 +44,16 @@ export default function usePloufPlouf() {
     duration = 3000,
     finalIndex,
   }: PloufPloufOptions = {}) => {
-    if (!isReady.value) return
+    if (!isReady.value) {
+      if (displayItems.value.filter((item) => !item.isDisabled).length == 1) {
+        displayItems.value.forEach((item, index) => {
+          if (!item.isDisabled) {
+            currentIndex.value = index
+          }
+        })
+      }
+      return
+    }
 
     isRunning.value = true
     speed.value = initialSpeed
@@ -98,6 +108,7 @@ export default function usePloufPlouf() {
     displayItems,
     isRunning,
     isReady,
+    isResettable,
     currentIndex,
     run,
     runWithoutLast,
