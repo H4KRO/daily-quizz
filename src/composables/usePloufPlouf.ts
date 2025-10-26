@@ -22,6 +22,13 @@ export default function usePloufPlouf() {
     })),
   )
 
+  const isReady = computed(
+    () =>
+      items.value.length > 0 &&
+      !isRunning.value &&
+      displayItems.value.filter((item) => !item.isDisabled).length > 1,
+  )
+
   const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 
   const tick = () => {
@@ -36,7 +43,7 @@ export default function usePloufPlouf() {
     duration = 3000,
     finalIndex,
   }: PloufPloufOptions = {}) => {
-    if (items.value.length === 0 || isRunning.value) return
+    if (!isReady.value) return
 
     isRunning.value = true
     speed.value = initialSpeed
@@ -90,6 +97,7 @@ export default function usePloufPlouf() {
     speed,
     displayItems,
     isRunning,
+    isReady,
     currentIndex,
     run,
     runWithoutLast,
