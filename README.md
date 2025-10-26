@@ -1,48 +1,87 @@
-# daily-quizz
+# Daily Quiz
 
-This template should help get you started developing with Vue 3 in Vite.
+A modern quiz application built with Vue 3 and TypeScript, featuring an elegant UI powered by Nuxt UI components.
 
-## Recommended IDE Setup
+## Features
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- 🎯 Interactive quiz interface with dynamic questions
+- 🎨 Modern and responsive UI using [@nuxt/ui](https://ui.nuxt.com/)
+- 🚀 Built with Vue 3 Composition API and TypeScript
+- ⚡ Lightning-fast development with Vite
+- 🔒 Type-safe development environment
 
-## Recommended Browser Setup
+## Technology Stack
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- **Frontend Framework:** Vue 3 with Composition API
+- **Language:** TypeScript
+- **Build Tool:** Vite
+- **UI Framework:** @nuxt/ui
+- **Router:** Vue Router
+- **Development Tools:**
+  - ESLint for code linting
+  - Prettier for code formatting
+  - Vue TypeScript Support (vue-tsc)
 
-## Type Support for `.vue` Imports in TS
+## Requirements
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- Node.js: ^20.19.0 || >=22.12.0
+- npm or compatible package manager
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+## Development Setup
 
 ```sh
+# Install dependencies
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# Start development server with hot-reload
 npm run dev
-```
 
-### Type-Check, Compile and Minify for Production
-
-```sh
+# Build for production
 npm run build
-```
 
-### Lint with [ESLint](https://eslint.org/)
+# Preview production build
+npm run preview
 
-```sh
+# Type check
+npm run type-check
+
+# Lint and fix files
 npm run lint
+
+# Format code with Prettier
+npm run format
 ```
+
+## Browser Setup
+
+For the best development experience, install Vue.js DevTools:
+
+- [Chrome/Edge Extension](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
+- [Firefox Extension](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
+
+## IDE Setup
+
+We recommend using [VS Code](https://code.visualstudio.com/) with the following extensions:
+
+- [Vue Language Features (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) - Official Vue tooling
+- [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
+
+Note: Disable the Vetur extension if you have it installed, as it may conflict with Volar.
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## Acknowledgments
+
+- [Vue.js](https://vuejs.org/) - The Progressive JavaScript Framework
+- [@nuxt/ui](https://ui.nuxt.com/) - Fully styled and customizable components for Nuxt
+- [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
