@@ -12,7 +12,7 @@ defineProps<{
 
 <template>
   <UCard>
-    <div class="flex gap-5">
+    <div class="flex gap-5 md:flex-row flex-col">
       <TransitionGroup name="fade">
         <UButton v-for="item in items" :key="item.text" :disabled="!item.isActive"
           :color="item.isDisabled ? 'error' : 'primary'" :variant="item.isActive ? 'solid' : 'outline'" block
